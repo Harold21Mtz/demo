@@ -2,9 +2,9 @@ version: '3.9'
 services:
   app-spring:
     container_name: app-spring
-#    image: openjdk
-    image: app_spring:1.0
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:
